@@ -8,16 +8,18 @@ body {
   font-weight: 800;
 }
 
-.small-para {
-  font-size: 14px;
-  font-weight: 800;
-}
-
+/*These two blocks positions have been swapped*/
 .para {
   font-size: 22px;
 }
 
-.confirm {
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+/***********************************************/
+
+#confirm-button { /* selector edited from .confirm to #confirm-button*/
   background: green;
   color: white;
   font-weight: bold;
@@ -39,4 +41,13 @@ div.text {
   color: rgb(0, 0, 0);
   font-size: 22px;
   font-weight: 100;
+}
+
+div.text.child { /*Added block. fr : prioritaire grâce à un nombre de selectors  plus grand */
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.para { /*Added block. Takes precedence by rule order */
+  font-weight: bold;
 }
